@@ -1,0 +1,298 @@
+/* Page wrapper with animated gradient like dashboard */
+.buyer-orders {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  background: linear-gradient(-45deg, #d1fae5, #bbf7d0, #86efac, #6ee7b7);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  padding: 20px;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #16a34a;
+}
+
+/* Dashboard Title */
+.dashboard-title {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.dashboard-title h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #065f46;
+}
+
+/* No orders text */
+.no-orders {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #374151;
+  margin-top: 50px;
+}
+
+/* Orders grid */
+.orders-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Order Card */
+.order-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.order-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Product Name */
+.order-product {
+  font-size: 22px;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.order-product:hover {
+  color: #2563eb;
+  transform: scale(1.05);
+  text-shadow: 0 0 6px rgba(37, 99, 235, 0.4);
+}
+
+/* Order details */
+.order-detail {
+  font-size: 15px;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px dashed #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.order-detail:last-child {
+  border-bottom: none;
+}
+
+.order-detail .label {
+  font-weight: 600;
+  color: #1f2937;
+  margin-right: 4px;
+}
+
+/* Hover */
+.order-detail:hover {
+  background: #f9fafc;
+  border-radius: 6px;
+  padding-left: 10px;
+}
+
+/* Status Bar */
+.status {
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  margin: 10px 0;
+  text-align: center;
+  width: fit-content;
+}
+
+/* Accepted */
+.status.accepted {
+  background: #dcfce7;
+  color: #15803d;
+  border: 1px solid #15803d;
+}
+
+/* Pending */
+.status.pending {
+  background: #fef9c3;
+  color: #b45309;
+  border: 1px solid #b45309;
+}
+
+/* Rejected */
+.status.rejected {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #b91c1c;
+}
+
+/* Cancelled */
+.status.cancelled {
+  background: #f3f4f6;  /* light gray background */
+  color: #4b5563;       /* neutral gray text */
+  border: 1px solid #9ca3af;
+}
+
+/* Footer */
+.footer {
+  background: #065f46;
+  text-align: center;
+  padding: 30px 16px;
+  font-size: 0.95rem;
+  color: #d1fae5;
+  margin-top: 40px;
+}
+
+/* In-page order messages */
+.order-message {
+  max-width: 600px;
+  margin: 10px auto 20px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1rem;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.order-message.success {
+  background: #dcfce7;
+  border: 1px solid #16a34a;
+  color: #15803d;
+}
+
+.order-message.error {
+  background: #fee2e2;
+  border: 1px solid #b91c1c;
+  color: #b91c1c;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Cancel button */
+.cancel-btn {
+  margin-top: 12px;
+  padding: 8px 14px;
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background: linear-gradient(135deg, #b91c1c, #991b1b);
+  transform: scale(1.05);
+}
+
+/* Confirmation box */
+.confirm-box {
+  margin-top: 12px;
+  padding: 12px 16px;
+  border: 1px solid #f87171;
+  border-radius: 8px;
+  background: #fff5f5;
+  color: #991b1b;
+  font-weight: 500;
+  animation: fadeSlideIn 0.3s ease forwards;
+}
+
+.confirm-actions {
+  margin-top: 8px;
+  display: flex;
+  gap: 10px;
+}
+
+.confirm-yes,
+.confirm-no {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.confirm-yes {
+  background: #dc2626;
+  color: white;
+}
+
+.confirm-yes:hover {
+  background: #b91c1c;
+  transform: translateY(-2px);
+}
+
+.confirm-no {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.confirm-no:hover {
+  background: #d1d5db;
+  transform: translateY(-2px);
+}
+
+/* Success / Error messages */
+.order-message {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.success-text {
+  color: #16a34a;
+}
+
+.error-text {
+  color: #dc2626;
+}
+
+/* Animation */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,186 @@
+.contact-page {
+  min-height: 100vh;
+  background: #f9fafb;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------------- Navbar ---------------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #15803d;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #374151;
+  transition: color 0.3s ease;
+}
+
+.navbar-links li a:hover,
+.navbar-links li a.active {
+  color: #15803d;
+}
+
+.navbar-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* ✅ Buttons same as Features/About/Landing */
+.btn-primary {
+  padding: 8px 18px;
+  border-radius: 8px;
+  background: #15803d;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #166534;
+}
+
+.btn-secondary {
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: 1px solid #15803d;
+  color: #15803d;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #15803d;
+  color: white;
+}
+
+/* ---------------- Hero Section ---------------- */
+.contact-hero {
+  text-align: center;
+  padding: 80px 20px 60px;
+  background: linear-gradient(135deg, #bbf7d0, #a7f3d0, #d1fae5);
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+  color: #064e3b;
+}
+
+.contact-hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.contact-hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #374151;
+}
+
+/* ---------------- Contact Info Cards ---------------- */
+.contact-content {
+  margin-top: 50px;
+  padding: 0 40px;
+  flex: 1;
+}
+
+.contact-grid {
+  display: grid;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .contact-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.contact-card {
+  background: linear-gradient(to bottom right, #f0fdf4, #ecfdf5);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #15803d;
+}
+
+.contact-card p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #374151;
+}
+
+/* ---------------- Footer ---------------- */
+.footer {
+  background: #1f2937;
+  color: #d1d5db;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.footer ul {
+  margin-top: 10px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+}
+
+.footer ul li a {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+  color: #ffffff;
+}
+
+/* ---------------- Gradient Animation ---------------- */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

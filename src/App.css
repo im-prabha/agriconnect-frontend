@@ -1,0 +1,21 @@
+/* Example container override if you want centered content */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Optional logo styling if you keep the Vite logo */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #10b981aa); /* green-500 glow */
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #3b82f6aa); /* blue-500 glow */
+}
+
+/* Utility classes are better in Tailwind, so keep extra CSS minimal */

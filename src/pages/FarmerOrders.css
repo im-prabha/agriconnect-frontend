@@ -1,0 +1,292 @@
+/* Page wrapper with animated gradient */
+.farmer-orders {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  background: linear-gradient(-45deg, #d1fae5, #bbf7d0, #86efac, #6ee7b7);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  padding: 20px;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Dashboard Title */
+.dashboard-title {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.dashboard-title h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #065f46;
+}
+
+/* No orders text */
+.no-orders {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #374151;
+  margin-top: 50px;
+}
+
+/* Orders grid */
+.orders-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Order Card */
+.order-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.order-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Product Name */
+.order-product {
+  font-size: 22px;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.order-product:hover {
+  color: #2563eb;
+  transform: scale(1.05);
+  text-shadow: 0 0 6px rgba(37, 99, 235, 0.4);
+}
+
+/* Order details */
+.order-detail {
+  font-size: 15px;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px dashed #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.order-detail:last-child {
+  border-bottom: none;
+}
+
+.order-detail .label {
+  font-weight: 600;
+  color: #1f2937;
+  margin-right: 4px;
+}
+
+/* Hover */
+.order-detail:hover {
+  background: #f9fafc;
+  border-radius: 6px;
+  padding-left: 10px;
+}
+
+/* Status Bar */
+.status {
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  margin: 10px 0;
+  text-align: center;
+  width: fit-content;
+}
+
+/* Accepted */
+.status.accepted {
+  background: #dcfce7;
+  color: #15803d;
+  border: 1px solid #15803d;
+}
+
+/* Pending */
+.status.pending {
+  background: #fef9c3;
+  color: #b45309;
+  border: 1px solid #b45309;
+}
+
+/* Rejected */
+.status.rejected {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #b91c1c;
+}
+
+/* Cancelled */
+.status.cancelled {
+  background: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #0369a1;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 1cm;
+}
+
+.accept-btn,
+.reject-btn {
+  margin-top: 12px;
+  min-width: 130px;   /* ✅ Uniform width */
+  padding: 10px 16px; /* ✅ Uniform padding */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.accept-btn {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+  color: white;
+}
+
+.accept-btn:hover {
+  background: linear-gradient(135deg, #15803d, #166534);
+  transform: scale(1.05);
+}
+
+.reject-btn {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  color: white;
+}
+
+.reject-btn:hover {
+  background: linear-gradient(135deg, #b91c1c, #991b1b);
+  transform: scale(1.05);
+}
+
+/* Confirmation box (Warning style) */
+.confirmation-box {
+  margin-top: 12px;
+  padding: 14px 18px;
+  border: 1px solid #facc15;
+  border-radius: 8px;
+  background: #fef9c3;
+  color: #92400e;
+  font-weight: 500;
+  animation: fadeSlideIn 0.3s ease forwards;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.confirmation-box p {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+/* Highlighted words */
+.highlight-accept {
+  color: #16a34a;
+}
+
+.highlight-reject {
+  color: #dc2626;
+}
+
+/* Confirmation buttons */
+.confirm-buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.confirm-btn{
+  margin-top: 35px;  
+  min-width: 130px;   /* ✅ Uniform width */
+  padding: 10px 16px; /* ✅ Uniform padding */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+.cancel-btn {
+  margin-top: 35px;
+  min-width: 130px;   /* ✅ Uniform width */
+  padding: 10px 16px; /* ✅ Uniform padding */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+/* Green for accepted */
+.confirm-btn.accepted {
+  background: linear-gradient(135deg, #22c55e, #15803d);
+  box-shadow: 0 2px 6px rgba(22, 163, 74, 0.4);
+}
+.confirm-btn.accepted:hover {
+  background: linear-gradient(135deg, #15803d, #166534);
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Red for rejected */
+.confirm-btn.rejected {
+  background: linear-gradient(135deg, #ef4444, #b91c1c);
+  box-shadow: 0 2px 6px rgba(220, 38, 38, 0.4);
+}
+.confirm-btn.rejected:hover {
+  background: linear-gradient(135deg, #b91c1c, #991b1b);
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Blue gradient for Cancel button */
+.cancel-btn {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  box-shadow: 0 2px 6px rgba(29, 78, 216, 0.4);
+  
+}
+.cancel-btn:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  transform: translateY(-2px) scale(1.05);
+  
+}
+
+/* Animation */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
