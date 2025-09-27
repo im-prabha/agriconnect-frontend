@@ -21,7 +21,7 @@ export default function Login() {
 
     try {
       // ✅ use environment-based API URL
-      const res = await api.post("/api/auth/login", form);
+      const res = await api.post("/auth/login", form);
 
       console.log("Login response:", res.data);
 

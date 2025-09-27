@@ -44,12 +44,12 @@ export default function Signup() {
 
     try {
       // ✅ use environment-based API URL
-      const res = await api.post("/api/auth/signup", {
-        name: form.name,
-        email: form.email,
-        password: form.password,
-        role: form.role,
-      });
+      const res = await api.post("/auth/register", {
+     name: form.name,
+     email: form.email,
+     password: form.password,
+    role: form.role,
+    });
 
       const token = res.data?.token ?? res.data?.user?.token;
       const role = res.data?.role ?? res.data?.user?.role ?? form.role;
