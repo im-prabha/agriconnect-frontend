@@ -44,7 +44,7 @@ export default function Signup() {
 
     try {
       // ✅ use environment-based API URL
-      const res = await api.post("/auth/register", {
+      const res = await api.post("/auth/signup", {
      name: form.name,
      email: form.email,
      password: form.password,
